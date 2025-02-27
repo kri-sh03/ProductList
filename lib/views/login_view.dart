@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:productapp/viewmodel/login_viewmodel.dart';
 import 'package:productapp/router/route.dart' as route;
+import 'package:productapp/viewmodel/login_viewmodel.dart';
 
 class LoginView extends StatelessWidget {
   final TextEditingController usernameController = TextEditingController();

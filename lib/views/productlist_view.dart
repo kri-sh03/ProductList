@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:productapp/router/route.dart' as route;
 import 'package:productapp/viewmodel/product_viewmodel.dart';
 import 'package:provider/provider.dart';
+
 import '../models/product.dart';
 
 class ProductListView extends StatefulWidget {
@@ -47,7 +48,7 @@ class _ProductListViewState extends State<ProductListView> {
           const SizedBox(width: 10),
           ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/login');
+              Navigator.pushNamed(context, route.loginScreen);
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.indigo,

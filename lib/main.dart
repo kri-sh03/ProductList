@@ -27,13 +27,12 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:productapp/models/product.dart';
+import 'package:productapp/router/route.dart' as route;
 import 'package:productapp/services/db_services.dart';
 import 'package:productapp/viewmodel/product_viewmodel.dart';
 import 'package:provider/provider.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'views/admin_dashboard.dart';
-import 'package:productapp/router/route.dart' as route;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -49,7 +48,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => ProductViewModel()..fetchProducts(),
-      child: MaterialApp(
+      child: const MaterialApp(
         onGenerateRoute: route.controller,
         debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.system,
